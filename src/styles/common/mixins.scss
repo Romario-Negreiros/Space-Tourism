@@ -1,0 +1,15 @@
+@mixin mQ($wdt) {
+  @media screen and (min-width: $wdt) {
+    @content;
+  }
+}
+
+@mixin bgs($urlDesktop, $urlTablet, $urlMobile) {
+  background-image: url($urlMobile);
+  @include mQ(450px) {
+    background-image: url($urlTablet);
+  }
+  @include mQ(1024px) {
+    background-image: url($urlDesktop);
+  }
+}

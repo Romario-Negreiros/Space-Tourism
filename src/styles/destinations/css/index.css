@@ -1,3 +1,23 @@
+@import url(https://fonts.googleapis.com/css2?family=Bellefair&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Condensed&display=swap);
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/*  Colors */
+/* Typography */
+/* Letter spacing */
 body {
   background: green;
 }

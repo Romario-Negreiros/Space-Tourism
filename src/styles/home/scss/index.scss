@@ -1,0 +1,14 @@
+@import '../../common/reset.scss';
+@import '../../common/variables.scss';
+@import '../../common/mixins.scss';
+@import '../../common/header.scss';
+
+body {
+  @include bgs(
+    '../../../../assets/home/background-home-desktop.jpg',
+    '../../../../assets/home/background-home-tablet.jpg',
+    '../../../../assets/home/background-home-mobile.jpg'
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}

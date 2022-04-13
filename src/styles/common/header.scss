@@ -1,0 +1,185 @@
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  overflow: hidden;
+  @include mQ(450px) {
+    padding: 0;
+    height: 96px;
+  }
+  @include mQ(1024px) {
+    padding-top: 40px; 
+    height: 136px;
+  }
+  .line {
+    position: absolute;
+    left: 166px;
+    z-index: 3; 
+    width: 473px;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.4);
+  }
+}
+
+.logo {
+  img {
+    width: 44px;
+    height: 44px;
+    @include mQ(700px) {
+      width: 48px;
+      height: 48px;
+    }
+  }
+  @include mQ(450px) {
+    margin-left: 24px;
+  }
+  @include mQ(700px) {
+    margin-left: 39px;
+  }
+  @include mQ(1024px) {
+    margin-left: 48px;
+  }
+}
+
+.nav {
+  @include mQ(450px) {
+    height: 100%;
+  }
+
+  .nav__mobile-open {
+    img {
+      width: 24px;
+      height: 21px;
+    }
+    @include mQ(450px) {
+      display: none;
+    }
+  }
+  
+  .nav__mobile-close {
+    display: none;
+    position: absolute;
+    top: 35.95px;
+    right: 21.46px;
+    z-index: 2;
+    img {
+      width: 19.09px;
+      height: 19.09px;
+    }
+    @include mQ(450px) {
+      display: none;
+    }
+  }
+
+  .nav__mobile-open--inactive {
+    display: none;
+  }
+
+  .nav__mobile-close--active {
+    display: block;
+  }
+
+  .nav__list {
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    transform: translateY(-100vh);
+    width: 254px;
+    height: 100vh;
+    font: $nav;
+    letter-spacing: $ls2;
+    color: $white;
+    background-color: rgba(255, 255, 255, 0.04);
+    -webkit-backdrop-filter: blur(81.55px);
+    backdrop-filter: blur(81.55px);
+    transition: all 0.4s ease-in-out;
+    @include mQ(450px) {
+      visibility: visible;
+      flex-direction: row;
+      gap: 20px;
+      position: unset;
+      transform: translateY(0);
+      width: unset;
+      height: 100%;
+      padding: 0 20px;
+      @include mQ(570px) {
+        gap: 38px;
+        padding: 0 48px;
+      }
+      @include mQ(800px) {
+        gap: 52px;
+        padding: 0 80px;
+      }
+      @include mQ(1024) {
+        padding: 0 123px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      margin-right: 12px;
+      width: 18px;
+      font-weight: bold;
+      @include mQ(450px) {
+        display: none;
+      }
+      @include mQ(1024px) {
+        display: inline-block;
+      }
+    }
+
+    li {
+      width: 221px;
+      margin-left: 33px;
+      padding: 5px;
+      cursor: pointer;
+      &:hover {
+        border-right: 4px solid rgba(255, 255, 255, 0.7);
+      }
+      @include mQ(450px) {
+        width: unset;
+        margin-left: unset;
+        height: 100%;
+        padding: 5px 0;
+        border-top: 3px solid transparent;
+        border-bottom: 3px solid transparent;
+        &:hover {
+          border-right: unset;
+          border-bottom: 3px solid rgba(255, 255, 255, 0.7);
+        }
+        display: grid;
+        place-items: center;
+      }
+      @include mQ(1024px) {
+        display: flex;
+      }
+    }
+
+    > :first-child {
+      margin-top: 100px;
+      @include mQ(450px) {
+        margin-top: unset;
+      }
+    }
+
+    li[data-active] {
+      border-right: 4px solid $white;
+      @include mQ(450px) {
+        border-right: none;
+        border-bottom: 3px solid $white;
+      }
+    }
+  }
+
+  .nav__list--active {
+    visibility: visible;
+    transform: translateY(0)
+  }
+}
