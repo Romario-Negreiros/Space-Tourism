@@ -1,6 +1,14 @@
-@import "../../common/reset.scss";
-@import "../../common/variables.scss";
+@import '../../common/reset.scss';
+@import '../../common/variables.scss';
+@import '../../common/mixins.scss';
+@import '../../common/header.scss';
 
 body {
-  background: green;
+  @include bgs(
+    '../../../../assets/destination/background-destination-desktop.jpg',
+    '../../../../assets/destination/background-destination-tablet.jpg',
+    '../../../../assets/destination/background-destination-mobile.jpg'
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
 }

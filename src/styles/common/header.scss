@@ -4,22 +4,13 @@ header {
   justify-content: space-between;
   padding: 24px;
   overflow: hidden;
-  @include mQ(450px) {
+  @include mQ(480px) {
     padding: 0;
     height: 96px;
   }
   @include mQ(1024px) {
     padding-top: 40px; 
     height: 136px;
-  }
-  .line {
-    position: absolute;
-    left: 166px;
-    z-index: 3; 
-    width: 473px;
-    height: 1px;
-    background-color: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 4px rgba(255, 255, 255, 0.4);
   }
 }
 
@@ -32,7 +23,7 @@ header {
       height: 48px;
     }
   }
-  @include mQ(450px) {
+  @include mQ(480px) {
     margin-left: 24px;
   }
   @include mQ(700px) {
@@ -44,7 +35,7 @@ header {
 }
 
 .nav {
-  @include mQ(450px) {
+  @include mQ(480px) {
     height: 100%;
   }
 
@@ -53,7 +44,7 @@ header {
       width: 24px;
       height: 21px;
     }
-    @include mQ(450px) {
+    @include mQ(480px) {
       display: none;
     }
   }
@@ -68,7 +59,7 @@ header {
       width: 19.09px;
       height: 19.09px;
     }
-    @include mQ(450px) {
+    @include mQ(480px) {
       display: none;
     }
   }
@@ -100,7 +91,7 @@ header {
     -webkit-backdrop-filter: blur(81.55px);
     backdrop-filter: blur(81.55px);
     transition: all 0.4s ease-in-out;
-    @include mQ(450px) {
+    @include mQ(480px) {
       visibility: visible;
       flex-direction: row;
       gap: 20px;
@@ -127,7 +118,7 @@ header {
       margin-right: 12px;
       width: 18px;
       font-weight: bold;
-      @include mQ(450px) {
+      @include mQ(480px) {
         display: none;
       }
       @include mQ(1024px) {
@@ -143,7 +134,7 @@ header {
       &:hover {
         border-right: 4px solid rgba(255, 255, 255, 0.7);
       }
-      @include mQ(450px) {
+      @include mQ(480px) {
         width: unset;
         margin-left: unset;
         height: 100%;
@@ -164,14 +155,14 @@ header {
 
     > :first-child {
       margin-top: 100px;
-      @include mQ(450px) {
+      @include mQ(480px) {
         margin-top: unset;
       }
     }
 
     li[data-active] {
       border-right: 4px solid $white;
-      @include mQ(450px) {
+      @include mQ(480px) {
         border-right: none;
         border-bottom: 3px solid $white;
       }
