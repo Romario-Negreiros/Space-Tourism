@@ -26,18 +26,63 @@
         </div>
 
         <ul class="nav__list">
-          <li data-active><span>00</span>HOME</li>
-          <li><span>01</span>DESTINATION</li>
-          <li><span>02</span>CREW</li>
-          <li><span>03</span>TECHNOLOGY</li>
+          <li>
+            <a href="index.html"><span>00</span>HOME</a>
+          </li>
+          <li data-active>
+            <a href="destinations.html"><span>01</span>DESTINATION</a>
+          </li>
+          <li>
+            <a href="crews.html"><span>02</span>CREW</a>
+          </li>
+          <li>
+            <a href="technologies.html"><span>03</span>TECHNOLOGY</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    01 Pick your destination Moon Mars Europa Titan Titan The only moon known to have a dense
-    atmosphere other than Earth, Titan is a home away from home (just a few hundred degrees
-    colder!). As a bonus, you get striking views of the Rings of Saturn. Avg. distance 1.6 bil. km
-    Est. travel time 7 years
+    <main>
+      <section class="heading">
+        <span>01</span>
+        <h1>PICK YOUR DESTINATION</h1>
+      </section>
+
+      <section class="img-wrapper">
+        <img src="./assets/destination/image-titan.webp" alt="Moon" />
+      </section>
+
+      <article class="content">
+        <ul class="content__options">
+          <li>MOON</li>
+          <li>MARS</li>
+          <li>EUROPA</li>
+          <li>TITAN</li>
+        </ul>
+
+        <section class="content__data">
+          <h2>Titan</h2>
+          <p>
+            The only moon known to have a dense atmosphere other than Earth, Titan is a home away
+            from home (just a few hundred degrees colder!). As a bonus, you get striking views of
+            the Rings of Saturn.
+          </p>
+        </section>
+
+        <div class="line"></div>
+
+        <section class="content__statistics">
+          <section>
+            <h3><abr>Avg.</abr> distance</h3>
+            <subtitle> 1.6 <abr>bil.</abr> <abr>km</abr></subtitle>
+          </section>
+          <section>
+            <h3><abr>Est.</abr> travel time</h3>
+            <subtitle>7 years</subtitle>
+          </section>
+        </section>
+      </article>
+    </main>
   </body>
   <script type="module" src="src/scripts/destinations/index.js"></script>
 </html>
