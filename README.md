@@ -27,23 +27,26 @@ Users should be able to:
 
 ### Screenshot
 
-<!-- ![](./screenshot.jpg) -->
-Not ready yet...
+![Home page](./assets/docs/homepage.jpeg)
 
 ### Links
 
 <!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
 - Live Site URL: [Space Tourism](https://romario-negreiros.github.io/Space-Tourism/)
-Not ready yet...
 
 ## My process
 
 ### Built with
 
-Not ready yet...
+- HTML
+- CSS
+- SASS
+- Javascript
+- Mobile first
 
 ### What I learned
 
+Not ready yet...
 
 ### Useful resources
 
