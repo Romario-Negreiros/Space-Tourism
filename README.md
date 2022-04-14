@@ -27,11 +27,11 @@ Users should be able to:
 
 ### Screenshot
 
-<div style="display: flex; gap: 10px;">
-<img src="./assets/docs/homepage.png" style="width: 200px; height: 200px;">
 
+![Home page](./assets/docs/homepage.png)
+<br />
 ![Destinations page](./assets/docs/destinationspage.png)
-</div>
+
 ### Links
 
 <!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
