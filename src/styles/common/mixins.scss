@@ -13,3 +13,28 @@
     background-image: url($urlDesktop);
   }
 }
+
+@mixin h5 {
+  color: $white;
+  font: $h5;
+  font-size: 16px;
+  letter-spacing: $ls2;
+  @include mQ(480px) {
+    font-size: 20px;
+  }
+  @include mQ(1024px) {
+    letter-spacing: $ls1;
+  }
+}
+
+@mixin pbody {
+  color: $lightBlue;
+  font: $body;
+  line-height: 25px;
+  @include mQ(480px) {
+    line-height: 28px;
+  }
+  @include mQ(1024px) {
+    line-height: 32px;
+  }
+}
