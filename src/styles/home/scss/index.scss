@@ -12,3 +12,136 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+article {
+  margin: 16px 24px 0 24px;
+  @include mQ(480px) {
+    margin: 106px 60px 0 60px;
+    padding: 5px;
+  }
+  @include mQ(650px) {
+    margin: 106px 159px 0 159px;
+  }
+  @include mQ(900px) {
+    margin: 106px 180px 0 180px;
+  }
+  @include mQ(1024px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 50px 0 0 0;
+  }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 42px;
+  @include mQ(480px) {
+    padding: 5px;
+  }
+  @include mQ(1024px) {
+    align-items: flex-start;
+    text-align: left;
+    padding-left: 100px;
+    width: 47%;
+  }
+
+  div {
+    h1 {
+      margin-top: 30px;
+      color: $white;
+      font: $h1;
+      font-size: 80px;
+      @include mQ(480px) {
+        font-size: 120px;
+      }
+      @include mQ(1150px) {
+        font: $h1;
+      }
+    }
+    h5 {
+      color: $white;
+      font: $h5;
+      font-size: 16px;
+      letter-spacing: $ls2;
+      @include mQ(480px) {
+        font-size: 20px;
+      }
+      @include mQ(1024px) {
+        letter-spacing: $ls1;
+      }
+    }
+  }
+
+  p {
+    color: $lightBlue;
+    font: $body;
+    line-height: 25px;
+    @include mQ(480px) {
+      line-height: 28px;
+    }
+    @include mQ(1024px) {
+      line-height: 32px;
+    }
+  }
+}
+
+.explore {
+  display: grid;
+  place-items: center;
+  margin: 80px 0 47px 0;
+  width: 100%;
+  @include mQ(600px) {
+    margin: 152px 0 80px 0;
+  }
+  @include mQ(1024px) {
+    margin: 0;
+    padding-left: 124px;
+  }
+
+  div,
+  button {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    @include mQ(600px) {
+      width: 240px;
+      height: 240px;
+    }
+  }
+
+  div {
+    display: none;
+    background: rgba(11, 12, 15, 0.8  );
+    @include mQ(1024px) {
+      display: block;
+      position: absolute;
+      z-index: 1;
+      transition: width 0.4s ease-in-out, height 0.4s ease-in-out;
+    }
+  }
+
+  button {
+    z-index: 2;
+    background: $white;
+    color: $dark;
+    font-size: 20px;
+    font-family: 'Bellefair';
+    letter-spacing: 1.25px;
+    cursor: pointer;
+    @include mQ(600px) {
+      font-size: 32px;
+      letter-spacing: 2px;
+    }
+  }
+
+  button:hover + div {
+    @include mQ(1024px) {
+      width: 340px;
+      height: 340px;
+    }
+  }
+}
