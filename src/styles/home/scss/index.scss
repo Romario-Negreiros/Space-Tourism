@@ -13,7 +13,7 @@ body {
   background-size: cover;
 }
 
-article {
+main {
   margin: 16px 24px 0 24px;
   @include mQ(480px) {
     margin: 106px 60px 0 60px;
@@ -49,8 +49,8 @@ article {
     width: 47%;
   }
 
-  div {
-    h1 {
+  section {
+    h2 {
       margin-top: 30px;
       color: $white;
       font: $h1;
@@ -62,30 +62,13 @@ article {
         font: $h1;
       }
     }
-    h5 {
-      color: $white;
-      font: $h5;
-      font-size: 16px;
-      letter-spacing: $ls2;
-      @include mQ(480px) {
-        font-size: 20px;
-      }
-      @include mQ(1024px) {
-        letter-spacing: $ls1;
-      }
+    h1 {
+      @include h5;
     }
   }
 
   p {
-    color: $lightBlue;
-    font: $body;
-    line-height: 25px;
-    @include mQ(480px) {
-      line-height: 28px;
-    }
-    @include mQ(1024px) {
-      line-height: 32px;
-    }
+    @include pbody;
   }
 }
 
