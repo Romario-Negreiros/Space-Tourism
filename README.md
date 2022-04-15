@@ -31,6 +31,8 @@ Users should be able to:
 ![Home page](./assets/docs/homepage.png)
 <br />
 ![Destinations page](./assets/docs/destinationspage.png)
+<br />
+![Crews page](./assets/docs/crewspage.png)
 
 ### Links
 
