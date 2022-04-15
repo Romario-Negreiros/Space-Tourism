@@ -7,6 +7,10 @@
           box-sizing: border-box;
 }
 
+.body--active {
+  overflow: hidden;
+}
+
 a {
   text-decoration: none;
 }
@@ -293,6 +297,7 @@ main {
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
     gap: 40px;
+    margin: 45px 30px;
     padding: 0 40px;
   }
 }
@@ -304,11 +309,16 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
 }
 @media screen and (min-width: 480px) {
   .heading {
-    text-align: left;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 .heading h1 {
@@ -349,7 +359,7 @@ main {
 .img-wrapper {
   width: 170px;
   height: 170px;
-  margin: 30px 0 30px;
+  margin: 30px 0;
 }
 @media screen and (min-width: 480px) {
   .img-wrapper {
