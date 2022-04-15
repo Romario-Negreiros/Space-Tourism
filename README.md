@@ -33,6 +33,8 @@ Users should be able to:
 ![Destinations page](./assets/docs/destinationspage.png)
 <br />
 ![Crews page](./assets/docs/crewspage.png)
+<br />
+![Technologies page](./assets/docs/technologiespage.png)
 
 ### Links
 
