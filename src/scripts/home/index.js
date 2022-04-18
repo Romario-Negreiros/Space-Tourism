@@ -1,5 +1,5 @@
 import addMenuFunctionality from '../common/AddMenuFunctionality.js'
-import redirect from '../common/redirect.js'
+import redirect from './redirect.js'
 
 addMenuFunctionality()
 
