@@ -256,6 +256,99 @@ header {
           transform: translateY(0);
 }
 
+@-webkit-keyframes loadingText {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+@keyframes loadingText {
+  0% {
+    content: "";
+  }
+  33% {
+    content: ".";
+  }
+  66% {
+    content: "..";
+  }
+  100% {
+    content: "...";
+  }
+}
+@-webkit-keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+@keyframes spin {
+  to {
+    -webkit-transform: rotate(1turn);
+            transform: rotate(1turn);
+  }
+}
+.loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 150px;
+}
+.loader .spinner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.loader .spinner::after {
+  content: "";
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-top: 10px solid #0b0d17;
+  -webkit-animation: spin 1s linear infinite;
+          animation: spin 1s linear infinite;
+}
+.loader .text {
+  font: 18px "Barlow Condensed";
+  color: white;
+}
+.loader .text::after {
+  content: "";
+  font: 18px "Barlow Condensed";
+  color: white;
+  -webkit-animation: loadingText 3s ease-out infinite;
+          animation: loadingText 3s ease-out infinite;
+}
+
+.loader-inative {
+  display: none;
+}
+
 body {
   background-image: url("../../../../assets/crew/background-crew-mobile.jpg");
   background-repeat: no-repeat;
@@ -307,6 +400,10 @@ main {
   main {
     margin: 30px 30px 0;
   }
+}
+
+.main-inative {
+  display: none;
 }
 
 .heading {

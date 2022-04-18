@@ -2,6 +2,7 @@
 @import '../../common/variables.scss';
 @import '../../common/mixins.scss';
 @import '../../common/header.scss';
+@import '../../common/loader.scss';
 
 body {
   @include bgs(
@@ -18,6 +19,10 @@ main {
   @include mQ(480px) {
     margin: 30px 30px 0;
   }
+}
+
+.main-inative {
+  display: none;
 }
 
 .heading {
