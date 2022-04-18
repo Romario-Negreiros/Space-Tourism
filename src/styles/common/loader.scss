@@ -1,0 +1,58 @@
+@include keyframes-animation(loadingText) {
+  0% {
+    content:'';
+  }
+  33% {
+    content: '.';
+  }
+  66% {
+    content: '..';
+  }
+  100% {
+    content: '...';
+  }
+}
+
+@include keyframes-animation(spin) {
+  to {
+    transform: rotate(1turn)  
+  }
+}
+
+.loader {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 150px;
+
+  .spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .spinner::after {
+      content: '';
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 10px solid $white;
+      border-top: 10px solid $dark;
+      animation: spin 1s linear infinite;
+  }
+
+  .text {
+    font: $body;
+    color: $white;
+  }
+  .text::after {
+    content: '';
+    font: $body;
+    color: $white;
+    animation: loadingText 3s ease-out infinite;
+  }
+}
+
+.loader-inative {
+  display: none;
+}
