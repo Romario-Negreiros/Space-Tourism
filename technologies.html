@@ -42,45 +42,39 @@
       </nav>
     </header>
 
-    <main>
+    <main class="loader">
+      <div class="spinner"></div>
+      <p class="text">Loading</p>
+    </main>
+
+    <main class="main-inative">
       <section class="heading">
         <span>03</span>
         <h1>SPACE LAUNCH 101</h1>
       </section>
 
       <section class="img-wrapper-mobile-tablet">
-        <img src="./assets/technology/image-launch-vehicle-landscape.jpg" alt="Launch Vehicle">
+        <img class="landscape-image" src="" alt="" />
       </section>
 
       <section class="img-wrapper-desktop">
-        <img src="./assets/technology/image-launch-vehicle-portrait.jpg" alt="Launch Vehicle">
+        <img class="portrait-image" src="" alt="" />
       </section>
 
       <article class="content">
         <ul class="content__options">
-          <li>
-            1
-          </li>
-          <li>
-            2
-          </li>
-          <li class="active-option">
-            3
-          </li>
+          <li>1</li>
+          <li>2</li>
+          <li>3</li>
         </ul>
 
         <section class="content__data">
           <h2>THE TERMINOLOGY...</h2>
-          <h3>Launch Vehicle</h3>
-          <p>
-            A launch vehicle or carrier rocket
-            is a rocket-propelled vehicle used to carry a payload from Earth's surface to space, usually to
-            Earth orbit or beyond. Our WEB-X carrier rocket is the most powerful in operation. Standing 150
-            metres tall, it's quite an awe-inspiring sight on the launch pad!
-          </body>
-          </p>
+          <h3 class="name"></h3>
+          <p class="description"></p>
         </section>
       </article>
     </main>
+  </body>
   <script type="module" src="src/scripts/technologies/index.js"></script>
 </html>
