@@ -88,3 +88,12 @@
     padding: 0 40px;
   }
 }
+
+@mixin keyframes-animation($name) {
+  @-webkit-keyframes #{$name} {
+    @content;
+  }
+  @keyframes #{$name} {
+    @content;
+  }
+}
