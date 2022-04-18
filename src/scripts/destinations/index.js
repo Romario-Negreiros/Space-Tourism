@@ -1,7 +1,6 @@
 import addMenuFunctionality from '../common/AddMenuFunctionality.js'
 import redirectWithQueryStrings from '../common/redirectWithQueryStrings.js'
-import pickUpDataFromJson from '../common/pickUpDataFromJson.js'
-import insertDataInElements from './insertDataInElements.js'
+import onLoadHandler from '../common/onLoadHandler.js'
 
 const main = document.querySelector('.main-inative')
 const loader = document.querySelector('.loader')
@@ -17,32 +16,6 @@ options.forEach((option, index) =>
   option.addEventListener('click', () => redirectWithQueryStrings('destinations.html', index))
 )
 
-window.addEventListener('load', async () => {
-  const params = new URLSearchParams(window.location.search)
-  if (!params.has('index')) {
-    const destination = await pickUpDataFromJson('destinations', '0')
-    insertDataInElements(destination)
-    manageClasses(0)
-
-    return
-  }
-
-  const index = params.get('index')
-  /*
-    destination: {
-      name: string,
-      images: {
-        png: string,
-        webp: string
-      },
-      description: string,
-      distance: string,
-      travel: string
-    }
-  */
-  const destination = await pickUpDataFromJson('destinations', index)
-  insertDataInElements(destination)
-  manageClasses(index)
-})
+window.addEventListener('load', onLoadHandler('destinations', manageClasses))
 
 addMenuFunctionality()
