@@ -38,7 +38,7 @@ Users should be able to:
 
 ### Links
 
-<!-- - Solution URL: [Add solution URL here](https://your-solution-url.com) -->
+- Solution URL: [Front end mentor](https://www.frontendmentor.io/solutions/responsive-multiepage-space-tourism-website-SJuxRxoV5)
 - Live Site URL: [Space Tourism](https://romario-negreiros.github.io/Space-Tourism/)
 
 ## My process
@@ -50,14 +50,19 @@ Users should be able to:
 - SASS
 - Javascript
 - Mobile first
+- BEM pattern
 
-### What I learned
+### What I practiced
 
-Not ready yet...
+- Mobile first workflow
+- I hadn't use SASS in a while, this project helped me to remember the syntax and how to use SASS,
+also how to learn how to create animations with it
+- Structuring html content with semantic tags
+- Writing readable (i hope) code with javascript, and make use of modules to divide functions reponsabilities.
 
 ### Useful resources
 
-Not ready yet...
+[How to create animations with SASS](https://glennmccomb.com/articles/creating-smooth-sequential-animations-with-sass/)
 
 ## Author
 
@@ -66,4 +71,5 @@ Not ready yet...
 
 ## Acknowledgments
 
-Not ready yet...
+- Thanks to Glenn McComb, who wrote the post about animations in SASS.
+
