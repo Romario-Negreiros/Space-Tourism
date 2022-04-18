@@ -3,12 +3,18 @@ import redirectWithQueryStrings from '../common/redirectWithQueryStrings.js'
 import pickUpDataFromJson from '../common/pickUpDataFromJson.js'
 import insertDataInElements from './insertDataInElements.js'
 
+const main = document.querySelector('.main-inative')
+const loader = document.querySelector('.loader')
 const options = Array.from(document.querySelector('.content__options').children)
 
+function manageClasses(index) {
+  options[index].classList.add('active-option')
+  main.classList.remove('main-inative')
+  loader.classList.add('loader-inative')
+}
+
 options.forEach((option, index) =>
-  option.addEventListener('click', () =>
-    redirectWithQueryStrings('destinations.html', index)
-  )
+  option.addEventListener('click', () => redirectWithQueryStrings('destinations.html', index))
 )
 
 window.addEventListener('load', async () => {
@@ -16,8 +22,9 @@ window.addEventListener('load', async () => {
   if (!params.has('index')) {
     const destination = await pickUpDataFromJson('destinations', '0')
     insertDataInElements(destination)
-    options[0].classList.add('active-option')
-    return 
+    manageClasses(0)
+
+    return
   }
 
   const index = params.get('index')
@@ -34,10 +41,8 @@ window.addEventListener('load', async () => {
     }
   */
   const destination = await pickUpDataFromJson('destinations', index)
-
   insertDataInElements(destination)
-
-  options[index].classList.add('active-option')
+  manageClasses(index)
 })
 
 addMenuFunctionality()
