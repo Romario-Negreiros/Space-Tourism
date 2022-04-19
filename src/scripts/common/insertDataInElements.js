@@ -12,7 +12,7 @@ function insertDataInElements(data) {
       } else {
         const image = document.querySelector('.images')
 
-        image.setAttribute('src', data[key].webp)
+        image.setAttribute('src', data[key].png)
         image.setAttribute('alt', data.name)
       }
       continue
